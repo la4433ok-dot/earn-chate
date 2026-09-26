@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>Money Power - আর্নিং অ্যাপ</title>
+    <title>Money Power - Earning App</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script src="https://sad.adsgram.ai/js/sad.min.js"></script>
     <script src='//libtl.com/sdk.js' data-zone='9730885' data-sdk='show_9730885'></script>
@@ -48,6 +48,8 @@
         .btn-short { background: linear-gradient(135deg, #22c55e, #16a34a); }
         .btn-monetag { background: linear-gradient(135deg, #a855f7, #9333ea); }
         .btn-sponsor { background: linear-gradient(135deg, #f97316, #ea580c); }
+        .btn-adsgram { background: linear-gradient(135deg, #06b6d4, #0891b2); }
+        .btn-refer { background: linear-gradient(135deg, #ec4899, #db2777); }
         .spin-section { background: linear-gradient(135deg, #ef4444, #dc2626); border-radius: 28px; margin: 20px; padding: 25px; text-align: center; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 20px rgba(239,68,68,0.3); }
         .spin-section:active { transform: scale(0.98); }
         .spin-icon { font-size: 60px; margin-bottom: 15px; }
@@ -156,7 +158,7 @@
         .giveaway-need-more { font-size: 12px; color: #ef4444; text-align: center; margin-top: 8px; font-weight: 600; }
         .joined-count { font-size: 11px; color: #64748b; text-align: center; margin-top: 6px; }
 
-        /* ===== SPONSOR PAGE — 10 buttons ===== */
+        /* ===== SPONSOR PAGE ===== */
         .sponsor-adult-card { background: linear-gradient(135deg, #1e293b, #0f172a); border-radius: 18px; padding: 16px 18px; margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
         .sponsor-adult-left { display: flex; align-items: center; gap: 14px; }
         .sponsor-adult-icon { width: 46px; height: 46px; background: linear-gradient(135deg, #ef4444, #dc2626); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
@@ -166,9 +168,35 @@
         .sponsor-adult-btn:disabled { background: #475569; cursor: not-allowed; }
         .sponsor-adult-btn:active { transform: scale(0.96); }
 
-        /* ===== WHEEL — daily limit ===== */
+        /* ===== WHEEL ===== */
         .wheel-daily-info { background: #f1f5f9; border-radius: 14px; padding: 10px 16px; margin-top: 14px; text-align: center; font-size: 13px; color: #475569; font-weight: 600; }
         .wheel-used { opacity: 0.5; pointer-events: none; }
+
+        /* ===== REFERRAL ===== */
+        .ref-hero { background: linear-gradient(135deg, #ec4899, #db2777); border-radius: 24px; margin: 20px; padding: 24px 20px; color: #fff; text-align: center; box-shadow: 0 8px 24px rgba(236,72,153,0.35); }
+        .ref-hero h2 { font-size: 22px; font-weight: 800; margin-bottom: 6px; }
+        .ref-hero p { font-size: 13px; opacity: 0.9; }
+        .ref-code-box { background: rgba(255,255,255,0.18); border-radius: 16px; padding: 16px; margin-top: 16px; }
+        .ref-code-label { font-size: 11px; opacity: 0.85; text-transform: uppercase; letter-spacing: 1px; }
+        .ref-code-value { font-size: 26px; font-weight: 800; font-family: monospace; letter-spacing: 3px; margin: 6px 0 12px; }
+        .ref-copy-btn { background: #fff; color: #db2777; border: none; padding: 12px 24px; border-radius: 50px; font-weight: 700; font-size: 14px; cursor: pointer; }
+        .ref-copy-btn:active { transform: scale(0.96); }
+        .ref-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 0 20px 18px; }
+        .ref-stat-card { background: #fff; border-radius: 18px; padding: 16px; text-align: center; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+        .ref-stat-card i { font-size: 22px; color: #ec4899; margin-bottom: 6px; }
+        .ref-stat-value { font-size: 22px; font-weight: 800; color: #1e293b; }
+        .ref-stat-label { font-size: 11px; color: #64748b; margin-top: 2px; }
+        .ref-share-btn { background: linear-gradient(135deg, #ec4899, #db2777); color: #fff; border: none; padding: 15px; border-radius: 16px; font-weight: 700; font-size: 15px; cursor: pointer; width: calc(100% - 40px); margin: 0 20px 20px; box-shadow: 0 4px 14px rgba(236,72,153,0.35); }
+        .ref-share-btn:active { transform: scale(0.97); }
+        .ref-list-item { background: #fff; border-radius: 14px; padding: 12px 14px; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; border: 1px solid #e2e8f0; }
+        .ref-list-name { font-weight: 600; font-size: 13px; color: #1e293b; }
+        .ref-list-date { font-size: 11px; color: #94a3b8; margin-top: 2px; }
+        .ref-list-bonus { font-weight: 700; color: #22c55e; font-size: 14px; }
+        .adsgram-card { background: linear-gradient(135deg, #06b6d4, #0891b2); border-radius: 20px; margin: 20px; padding: 22px; color: #fff; text-align: center; box-shadow: 0 4px 18px rgba(6,182,212,0.35); cursor: pointer; }
+        .adsgram-card:active { transform: scale(0.98); }
+        .adsgram-card i { font-size: 46px; margin-bottom: 10px; }
+        .adsgram-card h3 { font-size: 18px; font-weight: 800; margin-bottom: 4px; }
+        .adsgram-card p { font-size: 12px; opacity: 0.9; }
     </style>
 </head>
 <body>
@@ -190,35 +218,50 @@
                     </div>
                 </div>
                 <div class="balance-card">
-                    <p>মোট ব্যালেন্স</p>
+                    <p>Total Balance</p>
                     <p class="balance-amount">৳<span id="balance">0</span></p>
                 </div>
             </div>
         </div>
+
         <div class="action-grid">
-            <div class="action-btn btn-watch" onclick="openWatchAdsPage()"><i class="fas fa-play-circle"></i><h3>ওয়াচ অ্যাড</h3><p>দেখুন এবং আর্ন করুন</p><div class="limit-badge">১০টি অ্যাড</div></div>
-            <div class="action-btn btn-short" onclick="openCodeJobPage()"><i class="fas fa-code"></i><h3>শর্ট অ্যাড</h3><p>কোড সাবমিট করে আয়</p><div class="limit-badge">+১৫ টাকা</div></div>
-            <div class="action-btn btn-monetag" onclick="showMonetagAd()"><i class="fas fa-tv"></i><h3>ভিডিও অ্যাড</h3><p>+৳10 প্রতি অ্যাড</p><div class="limit-badge"><span id="monetag-count">0</span>/৩০ আজ</div></div>
-            <div class="action-btn btn-sponsor" onclick="navigateTo('sponsor-page')"><i class="fas fa-gift"></i><h3>স্পন্সর</h3><p>বোনাস পান</p><div class="limit-badge">১০টি অফার</div></div>
+            <div class="action-btn btn-watch" onclick="openWatchAdsPage()"><i class="fas fa-play-circle"></i><h3>Watch Ad</h3><p>Watch and earn</p><div class="limit-badge">10 Ads</div></div>
+            <div class="action-btn btn-short" onclick="openCodeJobPage()"><i class="fas fa-code"></i><h3>Short Ad</h3><p>Submit code & earn</p><div class="limit-badge">+৳15</div></div>
+            <div class="action-btn btn-monetag" onclick="showMonetagAd()"><i class="fas fa-tv"></i><h3>Video Ad</h3><p>+৳10 per ad</p><div class="limit-badge"><span id="monetag-count">0</span>/30 today</div></div>
+            <div class="action-btn btn-sponsor" onclick="navigateTo('sponsor-page')"><i class="fas fa-gift"></i><h3>Sponsor</h3><p>Get bonus</p><div class="limit-badge">10 Offers</div></div>
         </div>
-        <div class="spin-section" onclick="openWheelPage()"><div class="spin-icon">🎡</div><h3>লাকি হুইল</h3><p>স্পিন করে জিতে নিন ১০-১০০ টাকা!</p><div class="limit-badge mt-2">প্রতিদিন ১টি ফ্রি স্পিন</div></div>
-        <div class="channel-btn" onclick="joinTelegramChannel()"><div class="flex-row"><i class="fab fa-telegram text-xl" style="color:white;"></i><div><h3>অফিসিয়াল চ্যানেল</h3><p>সব আপডেট পেতে জয়েন করুন</p></div></div><i class="fas fa-arrow-right" style="color:white;"></i></div>
+
+        <!-- ADSGRAM AD BUTTON -->
+        <div class="adsgram-card" onclick="watchAdsgramAd()">
+            <i class="fas fa-rectangle-ad"></i>
+            <h3>Watch Adsgram Ad</h3>
+            <p>Watch a short ad and earn ৳15 instantly</p>
+            <div class="limit-badge">+৳15 per ad</div>
+        </div>
+
+        <div class="spin-section" onclick="openWheelPage()"><div class="spin-icon">🎡</div><h3>Lucky Wheel</h3><p>Spin & win ৳10-৳100!</p><div class="limit-badge mt-2">1 Free Spin Daily</div></div>
+
+        <div class="channel-btn" onclick="joinTelegramChannel()"><div class="flex-row"><i class="fab fa-telegram text-xl" style="color:white;"></i><div><h3>Official Channel</h3><p>Join for all updates</p></div></div><i class="fas fa-arrow-right" style="color:white;"></i></div>
+
+        <div class="channel-btn" style="background: linear-gradient(135deg, #ec4899, #db2777); box-shadow: 0 4px 12px rgba(236,72,153,0.3);" onclick="navigateTo('referral-page')">
+            <div class="flex-row"><i class="fas fa-user-plus text-xl" style="color:white;"></i><div><h3>Refer & Earn</h3><p>Invite friends, get ৳50 per referral</p></div></div><i class="fas fa-arrow-right" style="color:white;"></i>
+        </div>
     </div>
 
     <!-- CODE JOB PAGE -->
     <div id="codejob-page" class="page">
         <div class="glass-card">
-            <div class="flex-row mb-4"><i class="fas fa-arrow-left text-xl cursor-pointer" style="color:#1e293b;" onclick="navigateTo('home-page')"></i><h3 class="section-title" style="margin-bottom:0; margin-left:12px;">📝 কোড সাবমিট জব</h3></div>
+            <div class="flex-row mb-4"><i class="fas fa-arrow-left text-xl cursor-pointer" style="color:#1e293b;" onclick="navigateTo('home-page')"></i><h3 class="section-title" style="margin-bottom:0; margin-left:12px;">📝 Code Submit Job</h3></div>
             <div class="code-job-card">
                 <i class="fas fa-tasks fa-3x" style="color:#22c55e; margin-bottom:15px;"></i>
                 <div id="code-job-cooldown-status" class="cooldown-badge" style="display:none;"></div>
-                <p style="margin-bottom:15px; color:#475569;">নির্দিষ্ট লিংকে যান এবং কাজ সম্পন্ন করুন। সঠিক কোড সাবমিট করলে ১৫ টাকা পাবেন।</p>
-                <button class="job-link-btn" onclick="openJobLink()"><i class="fas fa-external-link-alt mr-2"></i> কাজের লিংকে যান</button>
+                <p style="margin-bottom:15px; color:#475569;">Go to the link below and complete the task. Submit the correct code to earn ৳15.</p>
+                <button class="job-link-btn" onclick="openJobLink()"><i class="fas fa-external-link-alt mr-2"></i> Go to Job Link</button>
                 <div class="code-input-area">
-                    <input type="text" id="code-input-field" class="code-input" placeholder="এখানে কোড লিখুন" autocomplete="off">
-                    <button id="code-submit-btn" class="code-submit-btn" onclick="submitCodeJob()"><i class="fas fa-check-circle mr-2"></i> কোড সাবমিট করুন</button>
+                    <input type="text" id="code-input-field" class="code-input" placeholder="Enter code here" autocomplete="off">
+                    <button id="code-submit-btn" class="code-submit-btn" onclick="submitCodeJob()"><i class="fas fa-check-circle mr-2"></i> Submit Code</button>
                 </div>
-                <div class="info-note"><i class="fas fa-info-circle"></i> প্রতি ৮ ঘন্টা পর পর একটি কোড সাবমিট করতে পারবেন।</div>
+                <div class="info-note"><i class="fas fa-info-circle"></i> You can submit one code every 8 hours.</div>
             </div>
         </div>
     </div>
@@ -226,37 +269,36 @@
     <!-- WALLET PAGE -->
     <div id="wallet-page" class="page">
         <div class="glass-card">
-            <h3 class="section-title">💰 আমার ওয়ালেট</h3>
+            <h3 class="section-title">💰 My Wallet</h3>
             <div class="balance-card mb-4">
-                <p>বর্তমান ব্যালেন্স</p>
+                <p>Current Balance</p>
                 <p class="text-3xl font-bold" style="color:#ffffff; margin-top:4px;">৳<span id="wallet-balance">0</span></p>
             </div>
-            <input type="number" id="withdraw-amount" class="withdraw-input" placeholder="টাকার পরিমাণ লিখুন (ন্যূনতম ৩০০০)">
+            <input type="number" id="withdraw-amount" class="withdraw-input" placeholder="Enter amount (min ৳1000)">
             <select id="withdraw-method" class="withdraw-input">
-                <option value="">পদ্ধতি নির্বাচন করুন</option>
-                <option value="Bkash">বিকাশ</option>
-                <option value="Nagad">নগদ</option>
-                <option value="Rocket">রকেট</option>
+                <option value="">Select Method</option>
+                <option value="Bkash">bKash</option>
+                <option value="Nagad">Nagad</option>
+                <option value="Rocket">Rocket</option>
             </select>
             <div id="payment-details-container"></div>
-            <button class="withdraw-btn mt-3" id="withdraw-btn">উত্তোলন রিকোয়েস্ট</button>
+            <button class="withdraw-btn mt-3" id="withdraw-btn">Request Withdrawal</button>
         </div>
         <div class="glass-card">
-            <h3 class="section-title">📋 উত্তোলন ইতিহাস</h3>
+            <h3 class="section-title">📋 Withdrawal History</h3>
             <div id="withdrawal-history-list"></div>
         </div>
     </div>
 
-    <!-- GIVEAWAY PAGE -->
+    <!-- GIVEAWAY / LOTTERY PAGE -->
     <div id="leaderboard-page" class="page">
 
-        <!-- Header -->
         <div class="giveaway-header">
             <div style="font-size:36px; margin-bottom:8px;">🎁</div>
-            <h2>মেগা গিভওয়ে</h2>
-            <p>নির্দিষ্ট ব্যালেন্স অর্জন করে লটারিতে অংশ নিন</p>
+            <h2>Mega Giveaway</h2>
+            <p>Reach the required balance to join the lottery</p>
             <div class="giveaway-balance-info">
-                আপনার বর্তমান ব্যালেন্স: ৳<span id="gw-balance">0</span>
+                Your current balance: ৳<span id="gw-balance">0</span>
             </div>
         </div>
 
@@ -265,23 +307,23 @@
             <div class="giveaway-card-header">
                 <div class="prize-rank-badge rank-gold">🥇</div>
                 <div>
-                    <div class="giveaway-prize-name">🏍️ প্রথম পুরস্কার — বাইক</div>
+                    <div class="giveaway-prize-name">🏍️ 1st Prize — Bike</div>
                     <div class="giveaway-prize-sub">Honda CB Shine 125cc</div>
                 </div>
             </div>
             <div class="giveaway-img-wrap">
-                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Bike" onerror="this.src='https://placehold.co/600x180/fbbf24/1e293b?text=🏍️+বাইক'">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Bike" onerror="this.src='https://placehold.co/600x180/fbbf24/1e293b?text=🏍️+Bike'">
             </div>
             <div class="giveaway-card-body">
                 <div class="giveaway-req">
-                    <span class="req-label">প্রয়োজনীয় ব্যালেন্স</span>
-                    <span class="req-amount">৳১০,০০০+</span>
+                    <span class="req-label">Required Balance</span>
+                    <span class="req-amount">৳10,000+</span>
                 </div>
                 <div class="giveaway-progress-bar">
                     <div class="giveaway-progress-fill fill-gold" id="gw-prog-1" style="width:0%"></div>
                 </div>
                 <button class="giveaway-join-btn locked" id="gw-btn-1" onclick="joinGiveaway(1, 10000)">
-                    🔒 ১০,০০০ টাকা হলে অংশ নিন
+                    🔒 Reach ৳10,000 to join
                 </button>
                 <div class="giveaway-need-more" id="gw-need-1"></div>
                 <div class="joined-count" id="gw-joined-1"></div>
@@ -293,23 +335,23 @@
             <div class="giveaway-card-header">
                 <div class="prize-rank-badge rank-silver">🥈</div>
                 <div>
-                    <div class="giveaway-prize-name">📱 দ্বিতীয় পুরস্কার — আইফোন</div>
+                    <div class="giveaway-prize-name">📱 2nd Prize — iPhone</div>
                     <div class="giveaway-prize-sub">iPhone 15 Pro Max</div>
                 </div>
             </div>
             <div class="giveaway-img-wrap">
-                <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=600&q=80" alt="iPhone" onerror="this.src='https://placehold.co/600x180/94a3b8/ffffff?text=📱+আইফোন'">
+                <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=600&q=80" alt="iPhone" onerror="this.src='https://placehold.co/600x180/94a3b8/ffffff?text=📱+iPhone'">
             </div>
             <div class="giveaway-card-body">
                 <div class="giveaway-req">
-                    <span class="req-label">প্রয়োজনীয় ব্যালেন্স</span>
-                    <span class="req-amount">৳৮,০০০+</span>
+                    <span class="req-label">Required Balance</span>
+                    <span class="req-amount">৳8,000+</span>
                 </div>
                 <div class="giveaway-progress-bar">
                     <div class="giveaway-progress-fill fill-silver" id="gw-prog-2" style="width:0%"></div>
                 </div>
                 <button class="giveaway-join-btn locked" id="gw-btn-2" onclick="joinGiveaway(2, 8000)">
-                    🔒 ৮,০০০ টাকা হলে অংশ নিন
+                    🔒 Reach ৳8,000 to join
                 </button>
                 <div class="giveaway-need-more" id="gw-need-2"></div>
                 <div class="joined-count" id="gw-joined-2"></div>
@@ -321,23 +363,23 @@
             <div class="giveaway-card-header">
                 <div class="prize-rank-badge rank-bronze">🥉</div>
                 <div>
-                    <div class="giveaway-prize-name">🧊 তৃতীয় পুরস্কার — ফ্রিজ</div>
+                    <div class="giveaway-prize-name">🧊 3rd Prize — Refrigerator</div>
                     <div class="giveaway-prize-sub">Samsung Double Door 300L</div>
                 </div>
             </div>
             <div class="giveaway-img-wrap">
-                <img src="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=600&q=80" alt="Fridge" onerror="this.src='https://placehold.co/600x180/cd7f32/ffffff?text=🧊+ফ্রিজ'">
+                <img src="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=600&q=80" alt="Fridge" onerror="this.src='https://placehold.co/600x180/cd7f32/ffffff?text=🧊+Fridge'">
             </div>
             <div class="giveaway-card-body">
                 <div class="giveaway-req">
-                    <span class="req-label">প্রয়োজনীয় ব্যালেন্স</span>
-                    <span class="req-amount">৳৫,০০০+</span>
+                    <span class="req-label">Required Balance</span>
+                    <span class="req-amount">৳5,000+</span>
                 </div>
                 <div class="giveaway-progress-bar">
                     <div class="giveaway-progress-fill fill-bronze" id="gw-prog-3" style="width:0%"></div>
                 </div>
                 <button class="giveaway-join-btn locked" id="gw-btn-3" onclick="joinGiveaway(3, 5000)">
-                    🔒 ৫,০০০ টাকা হলে অংশ নিন
+                    🔒 Reach ৳5,000 to join
                 </button>
                 <div class="giveaway-need-more" id="gw-need-3"></div>
                 <div class="joined-count" id="gw-joined-3"></div>
@@ -345,7 +387,7 @@
         </div>
 
         <div style="margin:0 20px 24px; background:#fff7ed; border:1px solid #fed7aa; border-radius:16px; padding:14px 16px; font-size:12px; color:#9a3412; line-height:1.6;">
-            ℹ️ <strong>নিয়মাবলি:</strong> গিভওয়ে ড্র প্রতি মাসের শেষ তারিখে হবে। একজন ইউজার একটি গিভওয়েতে একবারই অংশ নিতে পারবেন। বিজয়ীদের টেলিগ্রাম চ্যানেলে ঘোষণা দেওয়া হবে।
+            ℹ️ <strong>Rules:</strong> The giveaway draw will be held on the last day of each month. One user can join a giveaway only once. Winners will be announced on the official Telegram channel.
         </div>
     </div>
 
@@ -354,10 +396,10 @@
         <div class="glass-card">
             <div class="flex-row mb-4">
                 <i class="fas fa-arrow-left text-xl cursor-pointer" style="color:#1e293b;" onclick="navigateTo('home-page')"></i>
-                <h3 class="section-title" style="margin-bottom:0;">🔞 স্পন্সর অফার</h3>
+                <h3 class="section-title" style="margin-bottom:0;">🔞 Sponsor Offers</h3>
             </div>
             <div style="background:#fff1f2; border:1px solid #fecaca; border-radius:14px; padding:12px 14px; margin-bottom:16px; font-size:12px; color:#991b1b; font-weight:600;">
-                ⚠️ এই অফারগুলো শুধুমাত্র ১৮+ বয়সের জন্য। প্রতিটি স্পন্সর জয়েন করুন এবং বোনাস পান।
+                ⚠️ These offers are for 18+ users only. Join each sponsor and get a bonus.
             </div>
             <div id="sponsor-list"></div>
         </div>
@@ -366,29 +408,64 @@
     <!-- WATCH ADS PAGE -->
     <div id="watch-ads-page" class="page">
         <div class="glass-card">
-            <div class="flex-row mb-4"><i class="fas fa-arrow-left text-xl cursor-pointer" style="color:#1e293b;" onclick="navigateTo('home-page')"></i><h3 class="section-title" style="margin-bottom:0;">📺 অ্যাড দেখুন</h3></div>
-            <p class="text-sm" style="color:#64748b; margin-bottom:20px;">নিচের যেকোনো অ্যাডে ক্লিক করুন, ১৫ সেকেন্ড অপেক্ষা করুন এবং ৳১০ আর্ন করুন!</p>
+            <div class="flex-row mb-4"><i class="fas fa-arrow-left text-xl cursor-pointer" style="color:#1e293b;" onclick="navigateTo('home-page')"></i><h3 class="section-title" style="margin-bottom:0;">📺 Watch Ads</h3></div>
+            <p class="text-sm" style="color:#64748b; margin-bottom:20px;">Click any ad below, wait 15 seconds, and earn ৳10!</p>
             <div class="watch-ads-grid" id="watch-ads-grid"></div>
         </div>
     </div>
+
+    <!-- REFERRAL PAGE -->
+    <div id="referral-page" class="page">
+        <div class="ref-hero">
+            <div style="font-size:40px; margin-bottom:8px;">👥</div>
+            <h2>Refer & Earn</h2>
+            <p>Invite your friends and earn ৳50 for each successful referral</p>
+            <div class="ref-code-box">
+                <div class="ref-code-label">Your Referral Code</div>
+                <div class="ref-code-value" id="ref-code-display">------</div>
+                <button class="ref-copy-btn" onclick="copyReferralCode()"><i class="fas fa-copy"></i> Copy Code</button>
+            </div>
+        </div>
+
+        <div class="ref-stats">
+            <div class="ref-stat-card">
+                <i class="fas fa-user-friends"></i>
+                <div class="ref-stat-value" id="ref-count">0</div>
+                <div class="ref-stat-label">Total Referrals</div>
+            </div>
+            <div class="ref-stat-card">
+                <i class="fas fa-coins"></i>
+                <div class="ref-stat-value" id="ref-earned">৳0</div>
+                <div class="ref-stat-label">Referral Earnings</div>
+            </div>
+        </div>
+
+        <button class="ref-share-btn" onclick="shareReferral()"><i class="fas fa-share-alt"></i> Share Referral Link</button>
+
+        <div class="glass-card" style="margin-top:0;">
+            <h3 class="section-title" style="font-size:16px;">📋 Referral List</h3>
+            <div id="referral-list"></div>
+        </div>
+    </div>
+
 </div>
 
 <!-- WHEEL PAGE -->
 <div id="wheel-page" class="wheel-page-container">
     <div class="close-wheel" onclick="closeWheelPage()"><i class="fas fa-times"></i></div>
-    <h2 class="text-xl font-bold mb-4" style="color:#1e293b;">🎡 লাকি হুইল</h2>
+    <h2 class="text-xl font-bold mb-4" style="color:#1e293b;">🎡 Lucky Wheel</h2>
     <canvas id="wheelCanvas" width="300" height="300"></canvas>
-    <div class="wheel-daily-info" id="wheel-daily-info">আজকের স্পিন বাকি আছে ✅</div>
-    <button class="spin-btn-large" id="wheel-spin-btn" onclick="startSpin()"><i class="fas fa-sync-alt mr-2"></i> স্পিন করুন</button>
-    <p class="text-sm mt-3" style="color:#64748b;">প্রতিদিন ১টি ফ্রি স্পিন — জিতুন ১০-১০০ টাকা!</p>
+    <div class="wheel-daily-info" id="wheel-daily-info">Today's spin is available ✅</div>
+    <button class="spin-btn-large" id="wheel-spin-btn" onclick="startSpin()"><i class="fas fa-sync-alt mr-2"></i> SPIN</button>
+    <p class="text-sm mt-3" style="color:#64748b;">1 free spin daily — win ৳10-৳100!</p>
 </div>
 
 <!-- BOTTOM NAV -->
 <div class="bottom-nav">
-    <div class="nav-item active" onclick="navigateTo('home-page')" data-page="home-page"><i class="fas fa-home"></i><span>হোম</span></div>
-    <div class="nav-item" onclick="navigateTo('wallet-page')" data-page="wallet-page"><i class="fas fa-wallet"></i><span>ওয়ালেট</span></div>
-    <div class="nav-item" onclick="navigateTo('leaderboard-page')" data-page="leaderboard-page"><i class="fas fa-gift"></i><span>গিভওয়ে</span></div>
-    <div class="nav-item" onclick="openSupportOnce()"><i class="fas fa-headset"></i><span>সাপোর্ট</span></div>
+    <div class="nav-item active" onclick="navigateTo('home-page')" data-page="home-page"><i class="fas fa-home"></i><span>Home</span></div>
+    <div class="nav-item" onclick="navigateTo('wallet-page')" data-page="wallet-page"><i class="fas fa-wallet"></i><span>Wallet</span></div>
+    <div class="nav-item" onclick="navigateTo('leaderboard-page')" data-page="leaderboard-page"><i class="fas fa-gift"></i><span>Giveaway</span></div>
+    <div class="nav-item" onclick="navigateTo('referral-page')" data-page="referral-page"><i class="fas fa-user-plus"></i><span>Refer</span></div>
 </div>
 
 <script>
@@ -398,16 +475,18 @@ const APP_CONFIG = {
         minWithdrawal: 1000,
         dailyMonetagLimit: 10,
         adReward: 10,
+        adsgramReward: 15,
         watchAdCooldownHours: 10,
         codeJobCooldownHours: 8,
-        channelJoinBonus: 20
+        channelJoinBonus: 20,
+        referralBonus: 50
     },
     monetag: { zones: ['9730885', '9500387', '9715370'] },
     adsgram: { blockId: "int-25736" },
     social: {
         telegramChannel: "https://t.me/+fXJwdu2jQ4A0ZTM9",
-        supportBot: "https://t.me/munnypawersupportbot",
-        jobLink: "https://hode-codex.shovoy4.workers.dev"
+        jobLink: "https://hode-codex.shovoy4.workers.dev",
+        botLink: "https://t.me/moneypowertgbot"
     },
     validCodes: ["MP25X"],
     watchAdLinks: [
@@ -417,7 +496,6 @@ const APP_CONFIG = {
         "https://omg10.com/4/9429975",
         "https://omg10.com/4/11565551","https://omg10.com/4/11563351"
     ],
-    // ✏️ ১০টি স্পন্সর — link পরিবর্তন করুন
     sponsors: [
         { link: "https://t.me/iIobRcYvU2MGU9V1bot?startapp",  reward: 20 },
         { link: "https://t.me/e6TL6KXkRo4MGVlbo?startapp",  reward: 20 },
@@ -430,7 +508,6 @@ const APP_CONFIG = {
         { link: "https://omg10.com/4/9717825",  reward: 20 },
         { link: "https://omg10.com/4/9429975", reward: 20 }
     ],
-    // Wheel: ১০ থেকে ১০০ টাকা
     wheelSegments: [
         { value: 10,  color: "#FF6B6B", label: "৳10" },
         { value: 20,  color: "#4ECDC4", label: "৳20" },
@@ -446,10 +523,9 @@ const APP_CONFIG = {
 // ======================== GLOBALS ========================
 let currentUser = null, userData = null, monetagCount = 0;
 let currentZoneIndex = 0, isSpinning = false, currentAngle = 0, pendingSpin = false;
-let wheelCanvas, ctx, supportClicked = false;
+let wheelCanvas, ctx;
 let watchAdPending = {};
 
-// Safe Telegram WebApp reference
 const tg = (typeof Telegram !== 'undefined' && Telegram.WebApp)
     ? Telegram.WebApp
     : { ready(){}, expand(){}, initDataUnsafe: {}, openLink(u){ window.open(u,'_blank'); } };
@@ -482,7 +558,6 @@ function initTelegramApp() {
     tg.ready();
     tg.expand();
 
-    // ✅ FIX: Properly read all Telegram user fields
     const tgUser = tg.initDataUnsafe && tg.initDataUnsafe.user;
 
     if (tgUser && tgUser.id) {
@@ -494,7 +569,6 @@ function initTelegramApp() {
             photoUrl: tgUser.photo_url || ''
         };
     } else {
-        // Fallback for browser/desktop testing
         currentUser = { id: "demo001", firstName: "Demo", lastName: "User", username: "demo_user", photoUrl: '' };
     }
 
@@ -509,12 +583,10 @@ function loadUserData() {
 
     if (stored) {
         userData = stored;
-        // Reset daily counters on new day
         if (userData.lastDate !== today) {
             userData.monetagCount = 0;
             userData.lastDate = today;
         }
-        // Fill missing fields
         if (!userData.usedCodes) userData.usedCodes = [];
         if (!userData.lastCodeSubmitTime) userData.lastCodeSubmitTime = 0;
         if (!userData.watchAdCooldowns) userData.watchAdCooldowns = {};
@@ -522,7 +594,10 @@ function loadUserData() {
         if (!userData.userCode) userData.userCode = generateUserCode(currentUser.id);
         if (!userData.giveawayJoined) userData.giveawayJoined = {};
         if (!userData.lastSpinDate) userData.lastSpinDate = '';
-        // ✅ FIX: Always refresh user info from Telegram
+        if (!userData.referralCode) userData.referralCode = generateUserCode(currentUser.id);
+        if (!userData.referrals) userData.referrals = [];
+        if (!userData.referralEarnings) userData.referralEarnings = 0;
+        if (!userData.adsgramCount) userData.adsgramCount = 0;
         userData.firstName = currentUser.firstName || userData.firstName || '';
         userData.lastName  = currentUser.lastName  || userData.lastName  || '';
         userData.username  = currentUser.username  || userData.username  || 'user';
@@ -531,6 +606,7 @@ function loadUserData() {
         userData = {
             uid: currentUser.id,
             userCode: generateUserCode(currentUser.id),
+            referralCode: generateUserCode(currentUser.id),
             firstName: currentUser.firstName || '',
             lastName:  currentUser.lastName  || '',
             username:  currentUser.username  || 'user',
@@ -539,12 +615,14 @@ function loadUserData() {
             sponsorCompletions: {}, watchAdCooldowns: {},
             usedCodes: [], lastCodeSubmitTime: 0, lastDate: today,
             giveawayJoined: {}, lastSpinDate: '',
+            referrals: [], referralEarnings: 0,
+            adsgramCount: 0,
             joinedAt: Date.now()
         };
     }
 
     monetagCount = userData.monetagCount || 0;
-    saveUserToStorage(); // save updated info immediately
+    saveUserToStorage();
 
     updateUI();
     updateAdCounts();
@@ -553,6 +631,7 @@ function loadUserData() {
     loadGiveaway();
     loadWithdrawalHistory();
     updateCodeJobCooldownUI();
+    loadReferralUI();
 
     setInterval(() => { updateWatchAdTimers(); updateCodeJobCooldownUI(); }, 1000);
 }
@@ -573,16 +652,13 @@ function updateUI() {
     if (gwBal) gwBal.textContent = userData.balance.toLocaleString();
     document.getElementById("profile-code").textContent = '#' + userData.userCode;
 
-    // ✅ FIX: Show full name prominently
     const fullName = [userData.firstName, userData.lastName].filter(Boolean).join(' ');
     const fnEl = document.getElementById("profile-fullname");
     if (fnEl) fnEl.textContent = fullName || '';
 
-    // Username line
     const unEl = document.getElementById("profile-username");
     if (unEl) unEl.textContent = userData.username ? '@' + userData.username : '';
 
-    // ✅ FIX: Avatar - use Telegram photo or generate initials placeholder
     const avatarEl = document.getElementById("profile-avatar");
     if (avatarEl) {
         if (userData.photoUrl) {
@@ -606,6 +682,32 @@ function updateUI() {
 function updateAdCounts() {
     document.getElementById("monetag-count").textContent = monetagCount;
 }
+
+// ======================== ADSGRAM AD ========================
+window.watchAdsgramAd = async function() {
+    try {
+        if (typeof Adsgram === 'undefined') {
+            showToast("Adsgram is loading...", "warning");
+            return;
+        }
+        const ad = Adsgram.init({ blockId: APP_CONFIG.adsgram.blockId });
+        if (ad) {
+            showToast("Loading Adsgram ad...", "info");
+            await ad.show();
+            userData.balance += APP_CONFIG.adsgramReward;
+            saveUserToStorage();
+            updateUI();
+            playVibration();
+            if (typeof canvasConfetti === 'function') canvasConfetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+            showToast(`🎉 Earned ৳${APP_CONFIG.adsgramReward} from Adsgram ad!`, "success");
+            loadGiveaway();
+        } else {
+            showToast("Ad not available, try again", "error");
+        }
+    } catch(e) {
+        showToast("Adsgram ad error, try again", "error");
+    }
+};
 
 // ======================== GIVEAWAY ========================
 function loadGiveaway() {
@@ -634,19 +736,19 @@ function loadGiveaway() {
 
         if (alreadyJoined) {
             btn.className = 'giveaway-join-btn joined';
-            btn.textContent = '✅ অংশগ্রহণ নিশ্চিত হয়েছে!';
+            btn.textContent = '✅ Entry Confirmed!';
             if (needEl) needEl.textContent = '';
-            if (joinedEl) joinedEl.textContent = 'আপনি এই গিভওয়েতে জয়েন করেছেন। ড্র-এর জন্য অপেক্ষা করুন।';
+            if (joinedEl) joinedEl.textContent = 'You have joined this giveaway. Wait for the draw.';
         } else if (bal >= p.req) {
             btn.className = 'giveaway-join-btn eligible';
-            btn.textContent = '🎯 লটারিতে অংশ নিন';
+            btn.textContent = '🎯 Join Lottery';
             if (needEl) needEl.textContent = '';
             if (joinedEl) joinedEl.textContent = '';
         } else {
             const need = p.req - bal;
             btn.className = 'giveaway-join-btn locked';
-            btn.textContent = `🔒 আরো ৳${need.toLocaleString()} দরকার`;
-            if (needEl) needEl.textContent = `৳${need.toLocaleString()} আরো উপার্জন করুন`;
+            btn.textContent = `🔒 Need ৳${need.toLocaleString()} more`;
+            if (needEl) needEl.textContent = `Earn ৳${need.toLocaleString()} more to join`;
             if (joinedEl) joinedEl.textContent = '';
         }
     });
@@ -655,11 +757,11 @@ function loadGiveaway() {
 window.joinGiveaway = function(id, req) {
     if (!userData) return;
     if (userData.balance < req) {
-        showToast(`লটারিতে অংশ নিতে ৳${req.toLocaleString()} লাগবে`, "warning");
+        showToast(`You need ৳${req.toLocaleString()} to join this lottery`, "warning");
         return;
     }
     if (userData.giveawayJoined && userData.giveawayJoined[`gw_${id}`]) {
-        showToast("আপনি ইতিমধ্যে এই গিভওয়েতে জয়েন করেছেন!", "warning");
+        showToast("You have already joined this giveaway!", "warning");
         return;
     }
     userData.giveawayJoined[`gw_${id}`] = Date.now();
@@ -667,7 +769,60 @@ window.joinGiveaway = function(id, req) {
     loadGiveaway();
     playVibration();
     if (typeof canvasConfetti === 'function') canvasConfetti({ particleCount: 120, spread: 80, origin: { y: 0.6 } });
-    showToast("🎉 সফলভাবে গিভওয়েতে অংশ নিয়েছেন! ড্র-এর জন্য অপেক্ষা করুন।", "success");
+    showToast("🎉 Successfully joined the giveaway! Wait for the draw.", "success");
+};
+
+// ======================== REFERRAL ========================
+function loadReferralUI() {
+    if (!userData) return;
+    const codeEl = document.getElementById("ref-code-display");
+    if (codeEl) codeEl.textContent = userData.referralCode || '------';
+
+    const countEl = document.getElementById("ref-count");
+    if (countEl) countEl.textContent = (userData.referrals || []).length;
+
+    const earnedEl = document.getElementById("ref-earned");
+    if (earnedEl) earnedEl.textContent = '৳' + (userData.referralEarnings || 0).toLocaleString();
+
+    const listEl = document.getElementById("referral-list");
+    if (!listEl) return;
+    const refs = userData.referrals || [];
+    if (!refs.length) {
+        listEl.innerHTML = '<p class="text-center" style="color:#64748b;">No referrals yet</p>';
+        return;
+    }
+    listEl.innerHTML = refs.map(r => `
+        <div class="ref-list-item">
+            <div>
+                <div class="ref-list-name">${r.name || 'User'}</div>
+                <div class="ref-list-date">${r.date ? new Date(r.date).toLocaleDateString('en-US') : ''}</div>
+            </div>
+            <div class="ref-list-bonus">+৳${r.bonus || APP_CONFIG.app.referralBonus}</div>
+        </div>`).join('');
+}
+
+window.copyReferralCode = function() {
+    const code = userData.referralCode;
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(code).then(() => {
+            showToast("📋 Referral code copied!", "success");
+        }).catch(() => {
+            showToast("Code: " + code, "info");
+        });
+    } else {
+        showToast("Code: " + code, "info");
+    }
+};
+
+window.shareReferral = function() {
+    const code = userData.referralCode;
+    const botLink = APP_CONFIG.social.botLink;
+    const text = `🎁 Join Money Power and earn real money! Use my referral code: ${code}\n\n${botLink}?startapp=ref_${code}`;
+    if (tg.openLink) {
+        tg.openLink(`https://t.me/share/url?url=${encodeURIComponent(botLink)}&text=${encodeURIComponent(text)}`);
+    } else {
+        window.open(`https://t.me/share/url?url=${encodeURIComponent(botLink)}&text=${encodeURIComponent(text)}`, '_blank');
+    }
 };
 
 // ======================== CODE JOB ========================
@@ -682,7 +837,7 @@ function updateCodeJobCooldownUI() {
         const h = Math.floor(remaining / 3600000);
         const m = Math.floor((remaining % 3600000) / 60000);
         const s = Math.floor((remaining % 60000) / 1000);
-        if (statusDiv) { statusDiv.style.display = "inline-block"; statusDiv.textContent = `⏰ পরবর্তী সাবমিট: ${h}ঘ ${m}মি ${s}সে`; }
+        if (statusDiv) { statusDiv.style.display = "inline-block"; statusDiv.textContent = `⏰ Next submit: ${h}h ${m}m ${s}s`; }
         if (btn) btn.disabled = true;
         if (inp) inp.disabled = true;
     } else {
@@ -693,14 +848,14 @@ function updateCodeJobCooldownUI() {
 }
 
 window.openCodeJobPage = function() { navigateTo("codejob-page"); updateCodeJobCooldownUI(); };
-window.openJobLink = function() { tg.openLink(APP_CONFIG.social.jobLink); showToast("কাজের লিংকে যান এবং কোড সংগ্রহ করুন", "info"); };
+window.openJobLink = function() { tg.openLink(APP_CONFIG.social.jobLink); showToast("Go to the job link and collect the code", "info"); };
 
 window.submitCodeJob = function() {
     const cdMs = APP_CONFIG.app.codeJobCooldownHours * 3600000;
-    if (Date.now() - (userData.lastCodeSubmitTime || 0) < cdMs) { showToast(`প্রতি ${APP_CONFIG.app.codeJobCooldownHours} ঘন্টায় একটি কোড সাবমিট করতে পারবেন`, "warning"); return; }
+    if (Date.now() - (userData.lastCodeSubmitTime || 0) < cdMs) { showToast(`You can submit one code every ${APP_CONFIG.app.codeJobCooldownHours} hours`, "warning"); return; }
     const code = (document.getElementById("code-input-field").value || '').trim().toUpperCase();
-    if (!code) { showToast("কোড লিখুন!", "warning"); return; }
-    if (userData.usedCodes.includes(code)) { showToast("এই কোড আপনি ইতিমধ্যে ব্যবহার করেছেন!", "error"); return; }
+    if (!code) { showToast("Please enter a code!", "warning"); return; }
+    if (userData.usedCodes.includes(code)) { showToast("You have already used this code!", "error"); return; }
     if (APP_CONFIG.validCodes.includes(code)) {
         userData.usedCodes.push(code);
         userData.lastCodeSubmitTime = Date.now();
@@ -709,10 +864,10 @@ window.submitCodeJob = function() {
         document.getElementById("code-input-field").value = "";
         playVibration();
         if (typeof canvasConfetti === 'function') canvasConfetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
-        showToast("✅ সঠিক কোড! ১৫ টাকা যোগ হয়েছে!", "success");
+        showToast("✅ Correct code! ৳15 added!", "success");
         updateCodeJobCooldownUI(); loadGiveaway();
     } else {
-        showToast("❌ ভুল কোড! সঠিক কোড দিন।", "error");
+        showToast("❌ Wrong code! Please enter the correct code.", "error");
     }
 };
 
@@ -727,13 +882,13 @@ function loadWatchAds() {
         const onCd = cdEnd > now;
         const rem = onCd ? Math.ceil((cdEnd - now) / 1000) : 0;
         const h = Math.floor(rem/3600), m = Math.floor((rem%3600)/60), s = rem%60;
-        const cdTxt = onCd ? (h > 0 ? `${h}ঘ ${m}মি` : m > 0 ? `${m}মি ${s}সে` : `${s}সে`) : "";
+        const cdTxt = onCd ? (h > 0 ? `${h}h ${m}m` : m > 0 ? `${m}m ${s}s` : `${s}s`) : "";
         container.innerHTML += `
             <div class="watch-ad-item ${onCd?'disabled':''}" ${!onCd?`onclick="watchAdWithCooldown(${i})"`:''}>
                 <i class="fas fa-play-circle"></i>
-                <p style="font-weight:700;">অ্যাড ${i+1}</p>
+                <p style="font-weight:700;">Ad ${i+1}</p>
                 <p style="font-size:11px;">+৳${APP_CONFIG.app.adReward}</p>
-                ${onCd?`<div class="cooldown-timer">⏰ ${cdTxt} পর</div>`:''}
+                ${onCd?`<div class="cooldown-timer">⏰ ${cdTxt}</div>`:''}
             </div>`;
     }
 }
@@ -742,23 +897,23 @@ function updateWatchAdTimers() { loadWatchAds(); }
 
 window.watchAdWithCooldown = function(idx) {
     const cdEnd = (userData.watchAdCooldowns && userData.watchAdCooldowns[`ad_${idx}`]) || 0;
-    if (cdEnd > Date.now()) { showToast("অ্যাডটি কুলডাউনে আছে!", "warning"); return; }
+    if (cdEnd > Date.now()) { showToast("This ad is on cooldown!", "warning"); return; }
     tg.openLink(APP_CONFIG.watchAdLinks[idx]);
-    showToast("অ্যাড দেখার জন্য ১৫ সেকেন্ড অপেক্ষা করুন...", "info");
+    showToast("Wait 15 seconds while the ad loads...", "info");
     if (watchAdPending[idx]) clearTimeout(watchAdPending[idx]);
     watchAdPending[idx] = setTimeout(() => {
         userData.balance += APP_CONFIG.app.adReward;
         userData.watchAdCooldowns[`ad_${idx}`] = Date.now() + (APP_CONFIG.app.watchAdCooldownHours * 3600000);
         saveUserToStorage(); updateUI(); loadWatchAds(); playVibration();
-        showToast(`🎉 অ্যাড ${idx+1} দেখার জন্য ৳${APP_CONFIG.app.adReward} পেলেন!`, "success");
+        showToast(`🎉 Earned ৳${APP_CONFIG.app.adReward} for watching Ad ${idx+1}!`, "success");
         loadGiveaway(); delete watchAdPending[idx];
     }, 15000);
 };
 
 // ======================== MONETAG ========================
 window.showMonetagAd = async function() {
-    if (monetagCount >= APP_CONFIG.app.dailyMonetagLimit) { showToast("আজকের ভিডিও অ্যাড সীমা শেষ!", "warning"); return; }
-    showToast("ভিডিও অ্যাড লোড হচ্ছে...", "info");
+    if (monetagCount >= APP_CONFIG.app.dailyMonetagLimit) { showToast("Daily video ad limit reached!", "warning"); return; }
+    showToast("Loading video ad...", "info");
     const zone = APP_CONFIG.monetag.zones[currentZoneIndex % APP_CONFIG.monetag.zones.length];
     const fn = `show_${zone}`;
     if (typeof window[fn] === 'function') {
@@ -767,13 +922,13 @@ window.showMonetagAd = async function() {
             monetagCount++; currentZoneIndex++;
             userData.balance += APP_CONFIG.app.adReward;
             saveUserToStorage(); updateUI(); updateAdCounts(); playVibration();
-            showToast(`🎉 ৳${APP_CONFIG.app.adReward} উপার্জন!`, "success");
+            showToast(`🎉 Earned ৳${APP_CONFIG.app.adReward}!`, "success");
             loadGiveaway();
-        } catch(e) { showToast("অ্যাড ত্রুটি, আবার চেষ্টা করুন", "error"); }
-    } else { showToast("অ্যাড সিস্টেম প্রস্তুত হচ্ছে", "warning"); }
+        } catch(e) { showToast("Ad error, please try again", "error"); }
+    } else { showToast("Ad system is loading", "warning"); }
 };
 
-// ======================== SPONSORS (10 adult buttons) ========================
+// ======================== SPONSORS ========================
 function loadSponsors() {
     const container = document.getElementById("sponsor-list");
     if (!container) return;
@@ -788,12 +943,12 @@ function loadSponsors() {
                 <div class="sponsor-adult-left">
                     <div class="sponsor-adult-icon">🔞</div>
                     <div>
-                        <div class="sponsor-adult-title">১৮+ স্পন্সর জয়েন করুন<br><span style="font-size:10px;color:#94a3b8;font-weight:500;">অফার #${num}</span></div>
-                        <div class="sponsor-adult-reward">+৳${sp.reward} বোনাস${cd > 0 ? ` • ⏰ ${h}ঘ ${m}মি পরে` : ''}</div>
+                        <div class="sponsor-adult-title">Join 18+ Sponsor<br><span style="font-size:10px;color:#94a3b8;font-weight:500;">Offer #${num}</span></div>
+                        <div class="sponsor-adult-reward">+৳${sp.reward} bonus${cd > 0 ? ` • ⏰ ${h}h ${m}m left` : ''}</div>
                     </div>
                 </div>
                 <button class="sponsor-adult-btn" onclick="claimSponsor(${i})" ${cd > 0 ? 'disabled' : ''}>
-                    ${cd > 0 ? `${h}ঘ পরে` : 'জয়েন করুন'}
+                    ${cd > 0 ? `${h}h left` : 'Join'}
                 </button>
             </div>`;
     });
@@ -801,12 +956,12 @@ function loadSponsors() {
 
 window.claimSponsor = function(idx) {
     tg.openLink(APP_CONFIG.sponsors[idx].link);
-    showToast("স্পন্সরে ৫ সেকেন্ড পর বোনাস পাবেন", "info");
+    showToast("You will get the bonus after 5 seconds", "info");
     setTimeout(() => {
         userData.sponsorCompletions[`sponsor_${idx}`] = Date.now();
         userData.balance += APP_CONFIG.sponsors[idx].reward;
         saveUserToStorage(); updateUI(); loadSponsors(); playVibration();
-        showToast(`🎉 স্পন্সর #${idx + 1} জয়েনে ৳${APP_CONFIG.sponsors[idx].reward} পেলেন!`, "success");
+        showToast(`🎉 Earned ৳${APP_CONFIG.sponsors[idx].reward} from Sponsor #${idx + 1}!`, "success");
         loadGiveaway();
     }, 5000);
 };
@@ -818,18 +973,18 @@ function loadWithdrawalHistory() {
     const container = document.getElementById("withdrawal-history-list");
     if (!container) return;
     if (!history.length) {
-        container.innerHTML = '<p class="text-center" style="color:#64748b;">কোন ইতিহাস নেই</p>';
+        container.innerHTML = '<p class="text-center" style="color:#64748b;">No history yet</p>';
         return;
     }
     container.innerHTML = [...history].reverse().map(w => `
         <div style="display:flex;justify-content:space-between;padding:12px;background:#f8fafc;border-radius:12px;margin-bottom:8px;border:1px solid #e2e8f0;">
             <div>
-                <span style="font-weight:600;">${(w.amount||0).toLocaleString()} টাকা</span>
+                <span style="font-weight:600;">৳${(w.amount||0).toLocaleString()}</span>
                 <span style="font-size:11px;display:block;color:#64748b;">${w.method||''} • ${w.paymentDetail||''}</span>
-                <span style="font-size:10px;color:#94a3b8;">${w.requestedAt ? new Date(w.requestedAt).toLocaleDateString('bn-BD') : ''}</span>
+                <span style="font-size:10px;color:#94a3b8;">${w.requestedAt ? new Date(w.requestedAt).toLocaleDateString('en-US') : ''}</span>
             </div>
             <span style="color:${w.status==='pending'?'#f97316':'#22c55e'};font-size:13px;font-weight:600;align-self:center;">
-                ${w.status==='pending'?'প্রসেসিং':'অনুমোদিত'}
+                ${w.status==='pending'?'Processing':'Approved'}
             </span>
         </div>`).join('');
 }
@@ -838,10 +993,10 @@ function handleWithdrawal() {
     const amount = parseInt(document.getElementById("withdraw-amount").value);
     const method = document.getElementById("withdraw-method").value;
     const detail = (document.getElementById("payment-detail-input")?.value || '').trim();
-    if (!amount || amount < APP_CONFIG.app.minWithdrawal) { showToast(`ন্যূনতম উত্তোলন ${APP_CONFIG.app.minWithdrawal} টাকা`, "warning"); return; }
-    if (amount > userData.balance) { showToast("ব্যালেন্স অপর্যাপ্ত", "error"); return; }
-    if (!method) { showToast("পদ্ধতি নির্বাচন করুন", "warning"); return; }
-    if (!detail) { showToast("অ্যাকাউন্ট নম্বর দিন", "warning"); return; }
+    if (!amount || amount < APP_CONFIG.app.minWithdrawal) { showToast(`Minimum withdrawal is ৳${APP_CONFIG.app.minWithdrawal}`, "warning"); return; }
+    if (amount > userData.balance) { showToast("Insufficient balance", "error"); return; }
+    if (!method) { showToast("Please select a method", "warning"); return; }
+    if (!detail) { showToast("Please enter your account number", "warning"); return; }
     const wd = JSON.parse(localStorage.getItem(`mpwithdraw_${currentUser.id}`) || "[]");
     wd.push({ amount, method, paymentDetail: detail, status: "pending", requestedAt: new Date().toISOString() });
     localStorage.setItem(`mpwithdraw_${currentUser.id}`, JSON.stringify(wd));
@@ -850,23 +1005,16 @@ function handleWithdrawal() {
     document.getElementById("withdraw-amount").value = '';
     document.getElementById("withdraw-method").value = '';
     document.getElementById("payment-details-container").innerHTML = '';
-    showToast("উত্তোলন রিকোয়েস্ট জমা হয়েছে। ২৪-৪৮ ঘন্টায় প্রসেস হবে।", "success");
+    showToast("Withdrawal request submitted. It will be processed within 24-48 hours.", "success");
     loadGiveaway();
 }
 
 function updateDynamicPaymentFields() {
     const m = document.getElementById("withdraw-method").value;
     if (!m) { document.getElementById("payment-details-container").innerHTML = ''; return; }
-    const ph = m==="Bkash"?"বিকাশ নম্বর লিখুন":m==="Nagad"?"নগদ নম্বর লিখুন":"রকেট নম্বর লিখুন";
+    const ph = m==="Bkash"?"Enter bKash number":m==="Nagad"?"Enter Nagad number":"Enter Rocket number";
     document.getElementById("payment-details-container").innerHTML = `<input id="payment-detail-input" type="tel" placeholder="${ph}" class="withdraw-input" maxlength="15">`;
 }
-
-window.openSupportOnce = function() {
-    if (supportClicked) { showToast("আপনি ইতিমধ্যে সাপোর্টে ক্লিক করেছেন!", "warning"); return; }
-    supportClicked = true;
-    tg.openLink(APP_CONFIG.social.supportBot);
-    showToast("সাপোর্টে সংযুক্ত করা হচ্ছে...", "info");
-};
 
 // ======================== WHEEL ========================
 function initWheel() {
@@ -889,10 +1037,8 @@ function drawWheel() {
         ctx.fillText(APP_CONFIG.wheelSegments[i].label, R - 8, 5);
         ctx.restore();
     }
-    // Center
     ctx.beginPath(); ctx.arc(C,C,28,0,Math.PI*2);
     ctx.fillStyle="#fff"; ctx.fill(); ctx.strokeStyle="#e2e8f0"; ctx.lineWidth=2; ctx.stroke();
-    // Pointer
     ctx.beginPath(); ctx.moveTo(C-10,4); ctx.lineTo(C+10,4); ctx.lineTo(C,26);
     ctx.fillStyle="#ef4444"; ctx.fill();
 }
@@ -908,10 +1054,10 @@ function updateWheelDailyUI() {
     const infoEl = document.getElementById("wheel-daily-info");
     const btnEl  = document.getElementById("wheel-spin-btn");
     if (used) {
-        if (infoEl) infoEl.textContent = "আজকের স্পিন শেষ ❌ — আগামীকাল আবার আসুন";
+        if (infoEl) infoEl.textContent = "Today's spin is done ❌ — come back tomorrow";
         if (btnEl) { btnEl.disabled = true; btnEl.style.opacity = "0.5"; }
     } else {
-        if (infoEl) infoEl.textContent = "আজকের স্পিন বাকি আছে ✅";
+        if (infoEl) infoEl.textContent = "Today's spin is available ✅";
         if (btnEl) { btnEl.disabled = false; btnEl.style.opacity = "1"; }
     }
 }
@@ -921,7 +1067,7 @@ window.startSpin = async function() {
     if (isSpinning) return;
     const today = new Date().toISOString().split('T')[0];
     if (userData.lastSpinDate === today) {
-        showToast("আজকের স্পিন শেষ! আগামীকাল আবার আসুন।", "warning");
+        showToast("Today's spin is done! Come back tomorrow.", "warning");
         return;
     }
     pendingSpin = true;
@@ -952,7 +1098,6 @@ function executeSpin() {
         currentAngle = start + target * e;
         drawWheel();
         if (p < 1) { requestAnimationFrame(frame); return; }
-        // Determine segment under pointer (top = -PI/2)
         const norm = ((-currentAngle - Math.PI/2) % (Math.PI*2) + Math.PI*2) % (Math.PI*2);
         const idx = Math.floor(norm / ((Math.PI*2)/APP_CONFIG.wheelSegments.length)) % APP_CONFIG.wheelSegments.length;
         const reward = APP_CONFIG.wheelSegments[idx].value;
@@ -961,7 +1106,7 @@ function executeSpin() {
         saveUserToStorage(); updateUI();
         if (typeof canvasConfetti === 'function') canvasConfetti({ particleCount: 200, spread: 100, origin:{y:0.6} });
         playVibration();
-        showToast(`🎉 জিতেছেন ৳${reward} টাকা!`, "success");
+        showToast(`🎉 You won ৳${reward}!`, "success");
         isSpinning = false; btn.disabled = false;
         updateWheelDailyUI();
         loadGiveaway();
@@ -983,6 +1128,7 @@ function navigateTo(pageId) {
     if (pageId === "sponsor-page") loadSponsors();
     if (pageId === "watch-ads-page") loadWatchAds();
     if (pageId === "codejob-page") updateCodeJobCooldownUI();
+    if (pageId === "referral-page") loadReferralUI();
 }
 window.navigateTo = navigateTo;
 window.openWatchAdsPage = () => navigateTo("watch-ads-page");
@@ -992,7 +1138,7 @@ window.joinTelegramChannel = function() {
     setTimeout(() => {
         userData.balance += APP_CONFIG.app.channelJoinBonus;
         saveUserToStorage(); updateUI();
-        showToast(`🎉 চ্যানেল জয়েন বোনাস ৳${APP_CONFIG.app.channelJoinBonus} টাকা!`, "success");
+        showToast(`🎉 Channel join bonus ৳${APP_CONFIG.app.channelJoinBonus}!`, "success");
         loadGiveaway();
     }, 5000);
 };
